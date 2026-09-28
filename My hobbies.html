@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Mystery Hobbies</title>
+
+    <style>
+        body {
+            color: purple;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .backgroundButton {
+            background-color: rgb(64, 128, 0);
+        }
+
+        .hobbyButton {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🌈 My Mystery Hobbies 🌈</h1>
+
+    <p id="hobby">Click the button to discover one of my hobbies!</p>
+
+    <button class="backgroundButton" onclick="changeBackground()">
+        🎨 Change the background!
+    </button>
+
+    <button class="hobbyButton" onclick="showHobby()">
+        🎁 Mystery Hobby
+    </button>
+
+    <script>
+
+        let colors = [
+            "lightblue",
+            "lightpink",
+            "lightgreen",
+            "lavender",
+            "lightyellow",
+            "peachpuff"
+        ];
+
+        let number = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundColor = colors[number];
+
+            number = number + 1;
+
+            if (number == colors.length) {
+                number = 0;
+            }
+        }
+
+        let hobbies = [
+            "🎨 I love arts and crafts!",
+            "💻 I love coding!",
+            "🎮 I love gaming!",
+            "🧁 I love baking!",
+            "⚽ I love playing!",
+            "📚 I love reading!",
+            "🔎 I love exploring!",
+            "🥾 I love hiking!"
+        ];
+
+        let hobbyNumber = 0;
+
+        function showHobby() {
+            document.getElementById("hobby").innerHTML = hobbies[hobbyNumber];
+
+            hobbyNumber = hobbyNumber + 1;
+
+            if (hobbyNumber == hobbies.length) {
+                hobbyNumber = 0;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
